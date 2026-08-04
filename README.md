@@ -96,6 +96,86 @@ npm run dev
 * Analytics dashboard
 * Mobile application integration
 
+# Screenshots
+
+## 1. Smart Hospital Landing Page
+
+The landing page provides a modern entry point for the Smart Hospital Management System with navigation to hospital services, blood bank emergency requests, and donor registration.
+
+![Landing Page](screenshots/landing-page.png)
+
+
+
+## 2. Admin Login Page
+
+Secure administrator authentication page with JWT-based login integration. Authorized users can access the hospital command dashboard.
+
+![Admin Login](screenshots/admin-login.png)
+
+
+
+## 3. Hospital Command Dashboard
+
+Centralized dashboard providing real-time hospital overview including patients, doctors, appointments, blood inventory alerts, and quick actions.
+
+![Hospital Dashboard](screenshots/dashboard.png)
+
+
+
+## 4. Smart Blood Bank Dashboard
+
+Advanced blood management dashboard showing blood inventory status, emergency requests, active donors, and hospital network information.
+
+![Blood Bank Dashboard](screenshots/blood-bank-dashboard.png)
+
+
+
+## 5. Blood Inventory Management
+
+Inventory management module for tracking blood groups, components, available units, expiry dates, and stock status.
+
+![Blood Inventory](screenshots/blood-inventory.png)
+
+
+
+## 6. Emergency Blood Request Module
+
+Emergency request system allowing hospitals to create urgent blood requirements with priority levels, required units, and hospital details.
+
+![Emergency Request](screenshots/emergency-request.png)
+
+
+
+## 7. Donor Login Portal
+
+Dedicated donor authentication portal allowing registered donors to access emergency blood requests and donation services.
+
+![Donor Login](screenshots/donor-login.png)
+
+
+
+## 8. Donor Registration Portal
+
+New donor onboarding page collecting donor information such as blood group, contact details, location, and availability.
+
+![Donor Registration](screenshots/donor-registration.png)
+
+
+
+## 9. Patient Management Module
+
+Patient management system for registering patients, viewing patient details, and managing healthcare records.
+
+![Patient Module](screenshots/patient-module.png)
+
+
+
+## 10. Doctor Management Module
+
+Doctor management interface for maintaining doctor profiles, availability, and hospital information.
+
+![Doctor Module](screenshots/doctor-module.png)
+
 ## Author
 
 **Reethika Veerapareddy**
