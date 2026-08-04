@@ -1,0 +1,49 @@
+# =========================
+# Python Backend
+# =========================
+
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+
+# Environment variables
+.env
+
+# Flask
+instance/
+
+
+# =========================
+# React Frontend
+# =========================
+
+node_modules/
+dist/
+build/
+
+# Vite
+.vite/
+
+
+# =========================
+# IDE Files
+# =========================
+
+.vscode/
+.idea/
+
+# =========================
+# OS Files
+# =========================
+
+.DS_Store
+Thumbs.db
+
+
+# =========================
+# Logs
+# =========================
+
+*.log
