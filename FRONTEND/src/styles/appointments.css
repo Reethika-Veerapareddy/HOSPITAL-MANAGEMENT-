@@ -1,0 +1,293 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+.appointments-layout{
+display:grid;
+grid-template-columns:300px 1fr;
+gap:24px;
+min-height:100vh;
+background:#f4f8fc;
+padding:24px;
+}
+
+.appointment-sidebar{
+background:#ffffff;
+border-radius:24px;
+padding:20px;
+box-shadow:0 10px 30px rgba(15,23,42,0.08);
+}
+
+.sidebar-title h2{
+font-size:24px;
+color:#0f172a;
+}
+
+.sidebar-title span{
+color:#64748b;
+font-size:14px;
+}
+
+.appointment-list{
+margin-top:20px;
+display:flex;
+flex-direction:column;
+gap:12px;
+}
+
+.appointment-item{
+display:flex;
+gap:12px;
+align-items:center;
+padding:14px;
+border-radius:16px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.appointment-item:hover
+
+.appointment-item.active{
+background:linear-gradient(135deg,#2563eb,#3b82f6);
+color:white;
+}
+
+.appointment-time{
+width:70px;
+text-align:center;
+font-weight:700;
+background:#eff6ff;
+color:#2563eb;
+padding:8px;
+border-radius:10px;
+}
+
+.appointment-item.active .appointment-time{
+background:white;
+}
+
+.appointment-info h4{
+font-size:15px;
+margin-bottom:4px;
+}
+
+.appointment-info p{
+font-size:13px;
+color:#64748b;
+}
+
+.appointment-main{
+display:flex;
+flex-direction:column;
+gap:24px;
+}
+
+.appointment-hero{
+background:linear-gradient(135deg,#1d4ed8,#2563eb,#06b6d4);
+color:white;
+padding:30px;
+border-radius:24px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.appointment-hero h1{
+font-size:34px;
+}
+
+.live-btn{
+background:white;
+color:#2563eb;
+border:none;
+padding:12px 20px;
+border-radius:12px;
+font-weight:700;
+cursor:pointer;
+}
+
+.appointment-stats{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:18px;
+}
+
+.stat-card{
+background:white;
+padding:24px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(15,23,42,0.08);
+}
+
+.stat-card h2{
+color:#2563eb;
+font-size:32px;
+}
+
+.stat-card span{
+color:#64748b;
+}
+
+.appointment-profile,
+.booking-panel{
+background:white;
+border-radius:24px;
+padding:28px;
+box-shadow:0 10px 25px rgba(15,23,42,0.08);
+}
+
+.profile-header{
+display:flex;
+gap:18px;
+align-items:center;
+margin-bottom:24px;
+}
+
+.profile-avatar{
+width:80px;
+height:80px;
+border-radius:50%;
+background:linear-gradient(135deg,#2563eb,#06b6d4);
+color:white;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:28px;
+font-weight:800;
+}
+
+.profile-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:16px;
+margin-bottom:24px;
+}
+
+.profile-grid div{
+background:#f8fbff;
+border:1px solid #e2e8f0;
+border-radius:16px;
+padding:18px;
+}
+
+.profile-grid strong{
+color:#64748b;
+display:block;
+margin-bottom:8px;
+}
+
+.profile-grid p{
+color:#0f172a;
+font-weight:700;
+}
+
+.status{
+display:inline-block;
+padding:8px 14px;
+border-radius:999px;
+font-size:12px;
+font-weight:700;
+}
+
+.status.confirmed{
+background:#dcfce7;
+color:#15803d;
+}
+
+.status.waiting{
+background:#fef3c7;
+color:#b45309;
+}
+
+.status.completed{
+background:#dbeafe;
+color:#2563eb;
+}
+
+.booking-panel h2{
+margin-bottom:20px;
+}
+
+.booking-panel form{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:18px;
+}
+
+.booking-panel input,
+.booking-panel select,
+.booking-panel textarea{
+width:100%;
+padding:14px;
+border:1px solid #dbe4f0;
+border-radius:14px;
+font-size:15px;
+}
+
+.booking-panel textarea{
+grid-column:span 2;
+min-height:120px;
+}
+
+.booking-panel button{
+grid-column:span 2;
+padding:16px;
+border:none;
+border-radius:14px;
+background:linear-gradient(135deg,#2563eb,#06b6d4);
+color:white;
+font-weight:700;
+cursor:pointer;
+}
+
+.booking-panel button:hover{
+transform:translateY(-2px);
+}
+
+.delete-btn{
+width:100%;
+padding:14px;
+border:none;
+border-radius:14px;
+background:linear-gradient(135deg,#ef4444,#dc2626);
+color:white;
+font-weight:700;
+cursor:pointer;
+}
+
+@media(max-width:1100px){
+.appointment-stats{
+grid-template-columns:repeat(2,1fr);
+}
+
+.booking-panel form{
+grid-template-columns:1fr;
+}
+
+.booking-panel textarea,
+.booking-panel button{
+grid-column:span 1;
+}
+}
+
+@media(max-width:768px){
+.appointments-layout{
+grid-template-columns:1fr;
+}
+
+.appointment-stats{
+grid-template-columns:1fr;
+}
+
+.profile-grid{
+grid-template-columns:1fr;
+}
+
+.appointment-hero{
+flex-direction:column;
+align-items:flex-start;
+gap:16px;
+}
+}

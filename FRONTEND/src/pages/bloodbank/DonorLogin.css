@@ -1,0 +1,175 @@
+* {
+  box-sizing: border-box;
+}
+
+.donor-login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background:
+    radial-gradient(circle at top right, rgba(220, 38, 38, 0.12), transparent 35%),
+    radial-gradient(circle at bottom left, rgba(239, 68, 68, 0.10), transparent 30%),
+    linear-gradient(135deg, #fff5f5, #f8fafc);
+  font-family: "Segoe UI", sans-serif;
+}
+
+.donor-login-card {
+  width: 100%;
+  max-width: 480px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 28px;
+  padding: 36px;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.donor-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.donor-icon {
+  width: 78px;
+  height: 78px;
+  margin: 0 auto 16px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34px;
+  background: linear-gradient(135deg, #b00020, #ef4444);
+  color: white;
+  box-shadow: 0 12px 24px rgba(176, 0, 32, 0.25);
+}
+
+.donor-header h1 {
+  margin: 0 0 10px;
+  color: #b00020;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.donor-header p {
+  margin: 0;
+  color: #64748b;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+.input-group {
+  margin-bottom: 18px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #334155;
+  font-weight: 600;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  font-size: 15px;
+  background: #f8fafc;
+  transition: all 0.25s ease;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #b00020;
+  background: white;
+  box-shadow: 0 0 0 4px rgba(176, 0, 32, 0.08);
+}
+
+.login-btn {
+  width: 100%;
+  padding: 15px;
+  margin-top: 8px;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #b00020, #ef4444);
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 30px rgba(176, 0, 32, 0.28);
+}
+
+.login-links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 22px;
+  gap: 12px;
+}
+
+.login-links a {
+  color: #b00020;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.login-links a:hover {
+  text-decoration: underline;
+}
+
+.donor-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.feature {
+  background: #fff7f7;
+  border: 1px solid #fde2e2;
+  border-radius: 16px;
+  padding: 16px 12px;
+  text-align: center;
+}
+
+.feature span {
+  display: block;
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.feature p {
+  margin: 0;
+  color: #475569;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .donor-login-page {
+    padding: 20px;
+  }
+
+  .donor-login-card {
+    padding: 24px;
+  }
+
+  .donor-header h1 {
+    font-size: 28px;
+  }
+
+  .login-links {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .donor-features {
+    grid-template-columns: 1fr;
+  }
+}

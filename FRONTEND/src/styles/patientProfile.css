@@ -1,0 +1,292 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+.patient-profile-page {
+min-height: 100vh;
+background: linear-gradient(135deg, #0f172a 0%, #0f766e 40%, #2563eb 100%);
+padding: 36px;
+}
+
+.back-btn {
+background: rgba(255,255,255,0.12);
+color: white;
+border: 1px solid rgba(255,255,255,0.2);
+padding: 12px 18px;
+border-radius: 14px;
+cursor: pointer;
+margin-bottom: 24px;
+font-weight: 600;
+transition: 0.3s;
+}
+
+.back-btn:hover {
+background: rgba(255,255,255,0.2);
+}
+
+.profile-header {
+display: flex;
+align-items: center;
+gap: 24px;
+background: rgba(255,255,255,0.12);
+backdrop-filter: blur(18px);
+border: 1px solid rgba(255,255,255,0.2);
+border-radius: 28px;
+padding: 32px;
+color: white;
+margin-bottom: 28px;
+}
+
+.profile-avatar {
+width: 110px;
+height: 110px;
+border-radius: 50%;
+background: white;
+color: #0f766e;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 38px;
+font-weight: 800;
+}
+
+.profile-info h1 {
+font-size: 36px;
+margin-bottom: 8px;
+}
+
+.profile-info p {
+color: #dbeafe;
+margin-bottom: 12px;
+}
+
+.patient-type {
+display: inline-block;
+background: #dcfce7;
+color: #15803d;
+padding: 8px 16px;
+border-radius: 999px;
+font-weight: 700;
+font-size: 13px;
+}
+
+.summary-grid {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 18px;
+margin-bottom: 28px;
+}
+
+.summary-card {
+background: rgba(255,255,255,0.94);
+border-radius: 22px;
+padding: 24px;
+text-align: center;
+box-shadow: 0 18px 40px rgba(15,23,42,0.18);
+}
+
+.summary-card span {
+color: #64748b;
+font-size: 14px;
+}
+
+.summary-card h3 {
+color: #0f766e;
+font-size: 28px;
+margin-top: 10px;
+}
+
+.details-section {
+background: rgba(255,255,255,0.95);
+border-radius: 28px;
+padding: 28px;
+margin-bottom: 24px;
+box-shadow: 0 18px 40px rgba(15,23,42,0.18);
+}
+
+.details-section h2 {
+color: #0f172a;
+font-size: 26px;
+margin-bottom: 20px;
+}
+
+.details-grid {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 18px;
+}
+
+.detail-card {
+background: #ffffff;
+border: 1px solid #e2e8f0;
+border-radius: 20px;
+padding: 22px;
+}
+
+.detail-card.full-width {
+grid-column: span 2;
+}
+
+.detail-card h4 {
+color: #64748b;
+margin-bottom: 10px;
+font-size: 14px;
+}
+
+.detail-card p {
+color: #0f172a;
+font-size: 16px;
+font-weight: 600;
+line-height: 1.6;
+}
+
+.action-section {
+display: flex;
+gap: 18px;
+margin-top: 10px;
+}
+
+.edit-profile-btn,
+.delete-profile-btn {
+flex: 1;
+padding: 16px;
+border: none;
+border-radius: 16px;
+color: white;
+font-size: 16px;
+font-weight: 700;
+cursor: pointer;
+transition: 0.3s;
+}
+
+.edit-profile-btn {
+background: linear-gradient(135deg, #0f766e, #2563eb);
+}
+
+.delete-profile-btn {
+background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+.edit-profile-btn:hover,
+.delete-profile-btn:hover {
+transform: translateY(-3px);
+}
+
+.profile-loading {
+min-height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+background: #f4f8fc;
+color: #0f766e;
+font-size: 24px;
+font-weight: 700;
+}
+
+.modal-overlay {
+position: fixed;
+inset: 0;
+background: rgba(15,23,42,0.6);
+backdrop-filter: blur(8px);
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 1000;
+}
+
+.edit-modal {
+width: 760px;
+max-width: 95%;
+background: white;
+border-radius: 28px;
+padding: 30px;
+box-shadow: 0 28px 60px rgba(15,23,42,0.3);
+}
+
+.edit-modal h2 {
+color: #0f172a;
+margin-bottom: 22px;
+}
+
+.edit-modal form {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 18px;
+}
+
+.edit-modal input,
+.edit-modal select,
+.edit-modal textarea {
+padding: 15px 16px;
+border: 1px solid #dbe4f0;
+border-radius: 14px;
+font-size: 15px;
+}
+
+.edit-modal textarea {
+min-height: 100px;
+resize: vertical;
+}
+
+.edit-modal input:focus,
+.edit-modal select:focus,
+.edit-modal textarea:focus {
+outline: none;
+border-color: #0f766e;
+box-shadow: 0 0 0 4px rgba(15,118,110,0.12);
+}
+
+.edit-modal button {
+grid-column: span 2;
+background: linear-gradient(135deg, #0f766e, #2563eb);
+color: white;
+border: none;
+padding: 16px;
+border-radius: 14px;
+font-size: 16px;
+font-weight: 700;
+cursor: pointer;
+}
+
+@media (max-width: 900px) {
+.profile-header {
+flex-direction: column;
+text-align: center;
+}
+
+.summary-grid {
+grid-template-columns: repeat(2, 1fr);
+}
+
+.details-grid {
+grid-template-columns: 1fr;
+}
+
+.detail-card.full-width {
+grid-column: span 1;
+}
+
+.action-section {
+flex-direction: column;
+}
+
+.edit-modal form {
+grid-template-columns: 1fr;
+}
+
+.edit-modal button {
+grid-column: span 1;
+}
+}
+
+@media (max-width: 600px) {
+.summary-grid {
+grid-template-columns: 1fr;
+}
+
+.patient-profile-page {
+padding: 20px;
+}
+}

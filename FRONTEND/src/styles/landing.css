@@ -1,0 +1,413 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+:root {
+--primary: #2563eb;
+--primary-dark: #1d4ed8;
+--secondary: #06b6d4;
+--text: #0f172a;
+--muted: #64748b;
+--bg: #f8fbff;
+--white: #ffffff;
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+font-family: Arial, Helvetica, sans-serif;
+background: var(--bg);
+color: var(--text);
+}
+
+.landing-page {
+width: 100%;
+overflow-x: hidden;
+}
+
+/* Navbar */
+
+.landing-navbar {
+position: fixed;
+top: 0;
+width: 100%;
+padding: 18px 70px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+background: rgba(15, 23, 42, 0.6);
+backdrop-filter: blur(16px);
+z-index: 1000;
+}
+
+.logo h2 {
+color: white;
+font-size: 28px;
+font-weight: bold;
+}
+
+.landing-navbar nav {
+display: flex;
+align-items: center;
+gap: 28px;
+}
+
+.landing-navbar nav a {
+color: white;
+text-decoration: none;
+font-size: 15px;
+transition: 0.3s;
+}
+
+.landing-navbar nav a:hover {
+color: #93c5fd;
+}
+
+.login-btn {
+background: linear-gradient(135deg, var(--primary), var(--secondary));
+padding: 12px 20px;
+border-radius: 12px;
+font-weight: 600;
+}
+
+/* Hero */
+
+.hero {
+position: relative;
+height: 100vh;
+background: url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1800&q=80') center/cover no-repeat;
+display: flex;
+align-items: center;
+}
+
+.hero-overlay {
+position: absolute;
+inset: 0;
+background: linear-gradient(135deg, rgba(15, 23, 42, 0.88), rgba(37, 99, 235, 0.55));
+}
+
+.hero-content {
+position: relative;
+z-index: 2;
+max-width: 760px;
+margin-left: 80px;
+color: white;
+}
+
+.hero-badge {
+display: inline-block;
+padding: 10px 18px;
+border-radius: 999px;
+background: rgba(255, 255, 255, 0.14);
+border: 1px solid rgba(255, 255, 255, 0.25);
+margin-bottom: 22px;
+}
+
+.hero-content h1 {
+font-size: 64px;
+line-height: 1.08;
+margin-bottom: 22px;
+}
+
+.hero-content p {
+font-size: 20px;
+line-height: 1.8;
+color: #e2e8f0;
+margin-bottom: 36px;
+}
+
+.hero-buttons {
+display: flex;
+gap: 18px;
+margin-bottom: 42px;
+}
+
+.btn-primary,
+.btn-secondary,
+.cta-btn,
+.blood-buttons button {
+border: none;
+cursor: pointer;
+transition: all 0.3s ease;
+}
+
+.btn-primary {
+background: linear-gradient(135deg, var(--primary), var(--secondary));
+color: white;
+padding: 16px 32px;
+border-radius: 14px;
+box-shadow: 0 15px 30px rgba(37, 99, 235, 0.35);
+}
+
+.btn-secondary {
+background: rgba(255, 255, 255, 0.12);
+color: white;
+padding: 16px 32px;
+border-radius: 14px;
+border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.btn-primary:hover,
+.btn-secondary:hover,
+.cta-btn:hover,
+.blood-buttons button:hover {
+transform: translateY(-3px);
+}
+
+.hero-stats {
+display: flex;
+gap: 48px;
+}
+
+.stat h2 {
+font-size: 40px;
+}
+
+.stat span {
+color: #dbeafe;
+font-size: 15px;
+}
+
+/* Services */
+
+.services {
+padding: 100px 70px;
+}
+
+.section-title {
+text-align: center;
+margin-bottom: 55px;
+}
+
+.section-title h2 {
+font-size: 42px;
+margin-bottom: 12px;
+}
+
+.section-title p {
+color: var(--muted);
+font-size: 18px;
+}
+
+.service-grid {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+gap: 24px;
+}
+
+.service-card {
+background: white;
+padding: 34px;
+border-radius: 24px;
+box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+transition: all 0.35s ease;
+}
+
+.service-card:hover {
+transform: translateY(-10px);
+}
+
+.service-icon {
+width: 72px;
+height: 72px;
+border-radius: 18px;
+background: linear-gradient(135deg, var(--primary), var(--secondary));
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 34px;
+margin-bottom: 22px;
+}
+
+.service-card h3 {
+margin-bottom: 12px;
+}
+
+.service-card p {
+color: var(--muted);
+line-height: 1.7;
+}
+
+/* Blood banner */
+
+.blood-banner {
+padding: 90px 70px;
+background: linear-gradient(135deg, #dc2626, #991b1b);
+color: white;
+}
+
+.blood-content {
+max-width: 760px;
+}
+
+.blood-content h2 {
+font-size: 44px;
+margin-bottom: 16px;
+}
+
+.blood-content p {
+line-height: 1.8;
+margin-bottom: 28px;
+}
+
+.blood-buttons {
+display: flex;
+gap: 16px;
+}
+
+.blood-buttons button {
+background: white;
+color: #991b1b;
+padding: 14px 26px;
+border-radius: 12px;
+font-weight: 600;
+}
+
+/* Doctors */
+
+.doctors {
+padding: 100px 70px;
+}
+
+.doctor-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 28px;
+}
+
+.doctor-card {
+background: white;
+padding: 34px;
+border-radius: 24px;
+text-align: center;
+box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+transition: all 0.35s ease;
+}
+
+.doctor-card:hover {
+transform: translateY(-10px);
+}
+
+.doctor-avatar {
+width: 96px;
+height: 96px;
+margin: 0 auto 20px;
+border-radius: 50%;
+background: linear-gradient(135deg, var(--primary), var(--secondary));
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 42px;
+}
+
+/* CTA */
+
+.cta {
+padding: 100px 30px;
+text-align: center;
+background: linear-gradient(135deg, #eff6ff, #dbeafe);
+}
+
+.cta h2 {
+font-size: 46px;
+margin-bottom: 16px;
+}
+
+.cta p {
+color: var(--muted);
+margin-bottom: 28px;
+font-size: 18px;
+}
+
+.cta-btn {
+background: linear-gradient(135deg, var(--primary), var(--secondary));
+color: white;
+padding: 16px 34px;
+border-radius: 14px;
+}
+
+/* Footer */
+
+.footer {
+background: #0f172a;
+color: white;
+padding: 55px 70px;
+display: flex;
+justify-content: space-between;
+}
+
+.footer p {
+color: #cbd5e1;
+margin-top: 8px;
+}
+
+/* Responsive */
+
+@media (max-width: 1024px) {
+.service-grid {
+grid-template-columns: repeat(2, 1fr);
+}
+
+.doctor-grid {
+grid-template-columns: repeat(2, 1fr);
+}
+
+.hero-content h1 {
+font-size: 52px;
+}
+}
+
+@media (max-width: 768px) {
+.landing-navbar {
+padding: 16px 22px;
+flex-direction: column;
+gap: 16px;
+}
+
+.landing-navbar nav {
+flex-wrap: wrap;
+justify-content: center;
+}
+
+.hero-content {
+margin: 0 24px;
+}
+
+.hero-content h1 {
+font-size: 40px;
+}
+
+.hero-buttons {
+flex-direction: column;
+}
+
+.hero-stats {
+flex-direction: column;
+gap: 18px;
+}
+
+.services,
+.doctors,
+.blood-banner {
+padding: 70px 24px;
+}
+
+.service-grid,
+.doctor-grid {
+grid-template-columns: 1fr;
+}
+
+.blood-buttons {
+flex-direction: column;
+}
+
+.footer {
+flex-direction: column;
+gap: 24px;
+padding: 40px 24px;
+}
+}
